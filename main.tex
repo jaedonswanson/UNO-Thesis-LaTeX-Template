@@ -1,0 +1,66 @@
+% !TEX TS-program = pdflatexmk
+%!LW recipe=pdflatexmk
+\documentclass[12pt,oneside]{report}
+
+\input{formatting/packages}
+\input{formatting/layout}
+\input{formatting/metadata}
+
+\begin{document}
+\hypersetup{pageanchor=false}
+\begin{titlepage}
+    \centering
+    \singlespacing
+    \vspace*{0.3in}
+    \MakeUppercase{\ThesisTitle}\par\vspace{0.4in}
+    A Thesis\par\vspace{0.12in}
+    Presented to the\par\vspace{0.12in}
+    \DepartmentName\par\vspace{0.12in}
+    and the\par\vspace{0.12in}
+    Faculty of the Graduate College\par\vspace{0.12in}
+    University of Nebraska\par\vspace{0.4in}
+    In Partial Fulfillment\par
+    of the Requirements for the Degree\par\vspace{0.4in}
+    \DegreeName\par\vspace{0.4in}
+    University of Nebraska at Omaha\par\vspace{0.4in}
+    by\par\vspace{0.2in}
+    \AuthorName\par\vspace{0.4in}
+    \MonthYear\par\vspace{0.5in}
+    Supervisory Committee:\par\vspace{0.15in}
+    \AdvisorName\par\vspace{0.1in}
+    \CommitteeMemberOne\par\vspace{0.1in}
+    \CommitteeMemberTwo
+\end{titlepage}
+\hypersetup{pageanchor=true}
+
+\pagenumbering{roman}
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{3}
+
+\pagestyle{empty}
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+\input{Chapters/abstract}
+\clearpage
+\pagestyle{fancy}
+
+\input{Chapters/acknowledgements}
+
+\tableofcontents
+\clearpage
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+\clearpage
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoftables
+
+\clearpage
+\pagenumbering{arabic}
+\input{Chapters/introduction}
+\input{Chapters/methods}
+\input{Chapters/results}
+\input{Chapters/discussion}
+\input{Chapters/conclusions}
+\input{Chapters/references}
+\input{Chapters/appendices}
+\end{document}
