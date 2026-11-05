@@ -1,5 +1,4 @@
 % !TEX TS-program = pdflatexmk
-%!LW recipe=pdflatexmk
 \documentclass[12pt,oneside]{report}
 
 \input{formatting/packages}
@@ -33,15 +32,16 @@
 \end{titlepage}
 \hypersetup{pageanchor=true}
 
-\pagenumbering{roman}
 \setcounter{tocdepth}{2}
-\setcounter{secnumdepth}{3}
+\setcounter{secnumdepth}{-1}
 
 \pagestyle{empty}
 \chapter*{Abstract}
+\thispagestyle{empty}
 \addcontentsline{toc}{chapter}{Abstract}
 \input{Chapters/abstract}
 \clearpage
+\pagenumbering{roman}
 \pagestyle{fancy}
 
 \input{Chapters/acknowledgements}
