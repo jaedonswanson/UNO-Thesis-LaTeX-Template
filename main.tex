@@ -1,4 +1,5 @@
 % !TEX TS-program = pdflatexmk
+%!LW recipe=pdflatexmk
 \documentclass[12pt,oneside]{report}
 
 \input{formatting/packages}
@@ -28,7 +29,8 @@
     Supervisory Committee:\par\vspace{0.15in}
     \AdvisorName\par\vspace{0.1in}
     \CommitteeMemberOne\par\vspace{0.1in}
-    \CommitteeMemberTwo
+    \CommitteeMemberTwo\par\vspace{0.1in}
+    \CommitteeMemberThree\par\vspace{0.1in}
 \end{titlepage}
 \hypersetup{pageanchor=true}
 
@@ -36,7 +38,6 @@
 \setcounter{secnumdepth}{-1}
 
 \pagestyle{empty}
-\chapter*{Abstract}
 \thispagestyle{empty}
 \addcontentsline{toc}{chapter}{Abstract}
 \input{Chapters/abstract}
